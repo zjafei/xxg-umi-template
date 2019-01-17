@@ -12,6 +12,7 @@
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "test": "umi test",
     "precommit": "yarn lint",
     "analyze": "cross-env ANALYZE=1 umi build",
     "lint:js": "eslint --ext .js",

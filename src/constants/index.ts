@@ -1,14 +1,14 @@
 
 
-export const apiPrefix = '/api/';
+export const ApiPrefix = '/api/';
 
-export const pageSize = 15;
+export const PageSize = 15;
 
-export const paginationProps = {
+export const PaginationProps = {
     defaultCurrent: 1,
     total: 1,
-    pageSize,
-    defaultPageSize: pageSize,
+    pageSize:PageSize,
+    defaultPageSize: PageSize,
     // showSizeChanger: true,
     hideOnSinglePage: true,
     // showQuickJumper:true,
@@ -18,7 +18,7 @@ export const paginationProps = {
 };
 
 // 两列布局
-export const formItemLayout = {
+export const FormItemLayout = {
     labelCol: {
         xs: { span: 8 },
         sm: { span: 6 },
@@ -38,7 +38,7 @@ export const formItemLayout = {
 };
 
 // label占1/4 元素框占3/4
-export const singleFormItemLayout = {
+export const SingleFormItemLayout = {
     labelCol: {
         xs: { span: 8 },
         sm: { span: 6 },
@@ -57,7 +57,7 @@ export const singleFormItemLayout = {
     },
 };
 
-export const colItemLayout = {
+export const ColItemLayout = {
     xs: 24, // <576px
     sm: 24, // ≥576px
     md: 24, // ≥768px
@@ -67,4 +67,4 @@ export const colItemLayout = {
 };
 
 // table 滚动宽度
-export const scrollWidth = 1000;
+export const ScrollWidth = 1000;

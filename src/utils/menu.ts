@@ -1,6 +1,6 @@
-import { isUrl } from "@/utils";
 import memoizeOne from "memoize-one";
-import { isEqual } from "lodash";
+import { isEqual,omit } from "lodash";
+import { isUrl,includes } from "@/utils";
 
 /**
  * 单项菜单的属性
@@ -34,12 +34,30 @@ function formatter(data: IMenuItemProps[], parentPath: string = '/', parentAutho
     });
 }
 
-const getMenus = memoizeOne(
+/**
+ * 根据菜单和权限过滤有权限访问的菜单
+ */
+function getPermissionsMenu(menus:IMenuItemProps[],permissions:string[]):IMenuItemProps[]{
+    return menus.map(item=>{
+        if(includes<string>(permissions,item.authority)){
+            const result=omit(item,'children');
+            if(item.children){
+                const subResult=getPermissionsMenu(item.children,permissions);
+                if(subResult&&subResult.length>0){
+                    result['children']=subResult;
+                }
+            }
+            return result;
+        }
+        return null;
+    })
+}
+
+
+export const getMenus = memoizeOne(
     (datas: IMenuItemProps[], permissions: string[]) => {
         const allMenus= formatter(datas);
-        return allMenus;
+        return getPermissionsMenu(allMenus,permissions);
     },
     isEqual
 )
-
-export default getMenus;

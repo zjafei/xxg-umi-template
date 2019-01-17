@@ -1,6 +1,6 @@
 import { IMenuItemProps } from "@/utils/menu";
 
-export const permissions={
+export const Permissions={
   project:{
     base:`app.project`, // 项目菜单权限
     siteOverView:`app.project.siteOverView`, // 中心概况
@@ -13,7 +13,7 @@ const menus:IMenuItemProps[] = [
     name: 'project',
     icon: 'project',
     path: 'project',
-    authority:permissions.project.base,
+    authority:Permissions.project.base,
     children: [
       {
         name: 'siteOverView',
