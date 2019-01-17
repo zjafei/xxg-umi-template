@@ -41,7 +41,6 @@ class BasicLayout extends PureComponent {
       return <PageLoading fullScreen={true} />
     }
     // const accessMenus=getMenus(menus,permissions);
-    debugger;
     return (
       <Layout className={styles['wt-layout']}>
         <Sider

@@ -1,4 +1,4 @@
-import { includes,isUrl } from './index';
+import { includes,isUrl } from './index.ts';
 
 describe('test isUrl method',()=>{
   it('https url', () => {
