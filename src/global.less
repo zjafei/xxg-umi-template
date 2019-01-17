@@ -1,0 +1,28 @@
+@import '~themes/mixin.less';
+
+
+body {
+  margin: 0;
+}
+
+html, body, #root {
+  height: 100%;  
+}
+
+// 进入 退出 动画
+:global{
+  .page-slider-enter {
+    opacity: 0;
+  }
+  .page-slider-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+  }
+  .page-slider-exit {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+  }
+  .page-slider-exit-active {
+    opacity: 0;
+  }
+}

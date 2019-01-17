@@ -1,0 +1,90 @@
+{
+  "private": true,
+  "name": "xxg-umi-template",
+  "types": "./typings/*.d.ts",
+  "typesVersions": {
+    ">=3.1": {
+      "*": [
+        "ts3.1/*"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "precommit": "yarn lint",
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "lint:js": "eslint --ext .js",
+    "lint:style": "stylelint \"src/**/*.less\" --syntax less",
+    "tslint": "tslint --fix 'src/**/*.ts*'",
+    "lint": "yarn tslint && yarn lint:js && yarn lint:style"
+  },
+  "dependencies": {
+    "antd": "^3.12.3",
+    "classnames": "^2.2.6",
+    "dva": "^2.4.1",
+    "dva-model-extend": "^0.1.2",
+    "less-vars-to-js": "^1.3.0",
+    "lodash": "^4.17.11",
+    "lodash-decorators": "^6.0.1",
+    "memoize-one": "^5.0.0",
+    "moment": "^2.23.0",
+    "path-to-regexp": "^2.4.0",
+    "prop-types": "^15.6.2",
+    "qs": "^6.6.0",
+    "rc-queue-anim": "^1.6.10",
+    "rc-tween-one": "^2.2.22",
+    "react": "^16.7.0",
+    "react-container-query": "^0.11.0",
+    "react-media": "^1.9.2",
+    "react-transition-group": "^2.5.2",
+    "store": "^2.0.12",
+    "umi-request": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.119",
+    "@types/react-transition-group": "^2.0.15",
+    "@types/storejs": "^2.0.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-react": "^7.12.3",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "slash2": "^2.0.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "umi": "^2.4.2",
+    "umi-plugin-react": "^1.4.0"
+  },
+  "optionalDependencies": {
+    "puppeteer": "^1.11.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,json,jsx,less}": [
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
