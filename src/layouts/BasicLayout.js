@@ -17,7 +17,7 @@ const SubMenu = Menu.SubMenu;
     userInfo:global.userInfo,
     permissions:global.permissions
 }))
-class BasicLayout extends PureComponent<any> {
+class BasicLayout extends PureComponent {
   state = {
     collapsed: false,
   };

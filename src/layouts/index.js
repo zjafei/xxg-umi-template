@@ -2,7 +2,6 @@
 import {withRouter,router,dynamic } from 'umi';
 import {pick} from 'lodash';
 import {getToken} from '@/utils/store';
-import { IComponentProps } from "@/bases";
 
 const BasicLayout = dynamic({
   loader: () => import('./BasicLayout'),
@@ -13,7 +12,7 @@ const BlankLayout = dynamic({
 });
 
 @withRouter
-class Index extends PureComponent<IComponentProps> {
+class Index extends PureComponent {
   componentDidUpdate(prevProps) {
     const { location } = this.props;
     if (location !== prevProps.location) {
