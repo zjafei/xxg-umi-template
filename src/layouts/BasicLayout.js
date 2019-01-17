@@ -91,9 +91,18 @@ class BasicLayout extends PureComponent {
                 key={location.pathname}
                 classNames="page-slider"
                 timeout={300}
+                appear={true}
                 unmountOnExit={true}
               >
-                {children}
+      
+                <div>
+                
+              {children}
+
+              </div>
+
+              
+                
               </CSSTransition>
             </TransitionGroup>
             </div>

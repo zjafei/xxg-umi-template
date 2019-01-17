@@ -11,18 +11,22 @@ html, body, #root {
 
 // 进入 退出 动画
 :global{
-  .page-slider-enter {
+  .page-slider-enter,.page-slider-appear {
     opacity: 0;
+    transform: translateY(20px)
   }
-  .page-slider-enter-active {
+  .page-slider-enter-active,.page-slider-appear-active {
     opacity: 1;
-    transition: opacity 250ms ease-in;
+    transform: translateY(0);
+    transition: all 350ms ease-out;
   }
   .page-slider-exit {
     opacity: 1;
-    transition: opacity 250ms ease-in;
+    transform: translateY(0);
+    transition: all 250ms ease-in;
   }
   .page-slider-exit-active {
+    transform: translateY(-210px);
     opacity: 0;
   }
 }
