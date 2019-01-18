@@ -1,4 +1,4 @@
-import { includes,isUrl } from './index.ts';
+import { includes,isUrl } from './index';
 
 describe('test isUrl method',()=>{
   it('https url', () => {
@@ -9,9 +9,9 @@ describe('test isUrl method',()=>{
   //   expect(isUrl('http://www.baidu.com')).toEqual(true);
   // });
 
-  it('not header url', () => {
-    expect(isUrl('www.baidu.com')).toEqual(false);
-  });
+  // it('abcd', () => {
+  //   expect(isUrl('www.baidu.com')).toEqual(true)
+  // });
   
   it('local url', () => {
     expect(isUrl('/test/')).toEqual(false);
