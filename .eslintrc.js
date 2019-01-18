@@ -3,6 +3,7 @@ module.exports = {
   extends: ['eslint-config-umi'],
   rules: {
     'no-debugger':[2],
+    "unicode-bom":0,
     'react/jsx-filename-extension': [1, { extensions: ['.js','.jsx','.ts','tsx'] }],
     'import/no-unresolved':[2, { ignore: ['^@/', 'umi']}],
     'import/no-extraneous-dependencies': [
